@@ -3,21 +3,37 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-🔐 Cybersecurity nerd on a mission—what started during the lockdown turned into a full-blown obsession, and I haven’t looked back since.
+## whoami
 
-🎯 Ranked Top 50 in TCS HackQuest Season 9, powered by caffeine, curiosity, and a love for digging deep into systems.
+**Digital Forensic Analyst at Tata Consultancy Services.**
 
-🛡️ CEH v12 Certified, with a growing arsenal of TryHackMe achievements:
+End-to-end investigations across Windows, Linux and mobile — from evidence acquisition and chain of custody through analysis to the final report. The core of the work is correlation: logs, artifacts and device evidence brought together into one timeline that can be defended.
 
- • Pre-Security
- • Introduction to Cyber Security
- • Advent of Cyber 2022
+When a tool doesn't exist for the artifact in front of me, I build one.
 
-👾 CTFs, real-world attack simulations, and years of organizing cyber events have sharpened my skills—and my hunger to learn more.
+> **Workflow:** acquire → custody → analyse → correlate → timeline → report
+{: .prompt-tip }
 
-🧠 Where tech meets leadership: I’ve led ops, coordinated teams, and stayed on the frontlines of the cyber community.
+---
 
-🎮 Outside the terminal? I binge anime, outplay noobs in games, and recharge my brain with creativity.
+## What I do
 
-💻 This blog is my digital war room—where I share lessons, hacks, fails, wins, and the unfiltered truth of life in cyber.
-Stick around—things get real here.
+- 🔍 **Digital forensics & incident response** — Windows, Linux, and mobile artifacts
+- 🛠️ **Tool building** — open-source forensic tools to fill gaps where nothing else exists
+- 📝 **Writing** — plain-language breakdowns of what's hiding in the systems around us
+
+*Deleted is not gone.*
+
+---
+
+## Open to
+
+DFIR conversations, collaboration, and hard forensic problems. If you've found something interesting in an artifact or need a second opinion on a case, reach out.
+
+---
+
+## Connect
+
+- 💼 [LinkedIn — avinash-kotla](https://www.linkedin.com/in/avinash-kotla)
+- 🐙 [GitHub — KotlaAvinash](https://github.com/KotlaAvinash)
+- 📧 [avinashkotla3699@gmail.com](mailto:avinashkotla3699@gmail.com)
