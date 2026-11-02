@@ -2,7 +2,7 @@
 title: "My PC was keeping a diary of every app that used my camera. Then I almost erased it."
 date: 2026-10-25
 categories: [DFIR, Forensics]
-tags: [Windows, Forensics, DFIR, SQLite, Camera, Microphone, Capability Access Manager, WinWitness, Digital Forensics, Incident Response]
+tags: [Windows, Forensics, DFIR, SQLite, Camera, Microphone, Capability Access Manager, App Access History, Digital Forensics, Incident Response]
 image:
   path: /assets/img/posts/cam-forensics/banner.png
   alt: Windows Capability Access Manager — the hidden diary of every app that used your camera and mic
@@ -99,14 +99,14 @@ So a tool that reads only the `.db` misses the most recent activity. And a tool 
 
 ---
 
-## So I built a tool for it: WinWitness
+## So I built a tool for it: App Access History
 
-I called it **WinWitness**, because your PC really was a witness the whole time. I wanted one simple thing: **open a report and immediately see who used what, when.**
+I called it **App Access History**, because that's exactly what it gives you: the full history of which apps accessed what. I wanted one simple thing: **open a report and immediately see who used what, when.**
 
-![The activity timeline in WinWitness, on demo data](/assets/img/posts/cam-forensics/timeline.png)
-*The activity timeline in WinWitness, on demo data*
+![The activity timeline in App Access History, on demo data](/assets/img/posts/cam-forensics/timeline.png)
+*The activity timeline in App Access History, on demo data*
 
-WinWitness reads the databases, the `-wal`, the slack space and deleted records, without ever changing the original files. It hashes every file before and after the run to prove that. Then it builds a single report you can open in any browser:
+App Access History reads the databases, the `-wal`, the slack space and deleted records, without ever changing the original files. It hashes every file before and after the run to prove that. Then it builds a single report you can open in any browser:
 
 - **A timeline:** every use, in order, with start, end, duration, app, full path, service, account, and Allowed / Blocked
 - **App cards:** what each app used, how often, for how long
@@ -132,14 +132,14 @@ It's plain Python with nothing to install. Before calling it done, I hit it with
 
 It's free and open source:
 
-👉 **[github.com/KotlaAvinash/WinWitness](https://github.com/KotlaAvinash/WinWitness)**
+👉 **[github.com/KotlaAvinash/app-access-history](https://github.com/KotlaAvinash/app-access-history)**
 
 ```bash
 python docs/demo/build_demo_evidence.py demo_evidence
-python winwitness_cli.py demo_evidence -o demo_report --tz +05:30
+python app_access_history_cli.py demo_evidence -o demo_report --tz +05:30
 ```
 
-Open `demo_report/WinWitness_report.html` and explore the demo case. Or point it at a folder with a real `CapabilityAccessManager.db` (always a copy!).
+Open `demo_report/AppAccessHistory_report.html` and explore the demo case. Or point it at a folder with a real `CapabilityAccessManager.db` (always a copy!).
 
 ---
 
